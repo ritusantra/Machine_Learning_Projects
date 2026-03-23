@@ -10,7 +10,9 @@
 * [Model Training and Evaluation]()
 
 ## Introduction
+Product quality is a critical factor in procurement and supply chain management. Receiving a high number of defective units from suppliers can lead to production disruptions, increased inspection costs, and delays in downstream operations. However, procurement teams often identify quality issues only after the goods are delivered, making it difficult to take preventive actions.
 
+This project focuses on building a machine learning model to predict the number of defective units in a purchase order using historical procurement data. By analyzing factors such as supplier, item category, order quantity, and pricing details, the model estimates the expected number of defective units before the order is fulfilled. These predictions can help procurement teams identify high-risk orders, improve supplier evaluation, and take proactive quality control measures.
  
 ## Data
 The [dataset](..) contains historical purchase order records with supplier, pricing, and delivery information.
