@@ -5,9 +5,10 @@
 * [Data](#data)
 * [Libraries](#libraries)
 * [Methodology](#methodology)
-* [Exploratory Data Analysis](#data-cleansing-and-manipulation)
-* [Feature Engineering](#dax-measures)
-* [Model Training and Evaluation]()
+     * [Features Creation](#features-creation)
+     * [Exploratory Data Analysis](#exploratory-data-analysis)
+     * [Feature Engineering](#feature-engineering)
+     * [Model Training and Evaluation](#model-training-and-evaluation)
 
 ## Introduction
 Product quality is a critical factor in procurement and supply chain management. Receiving a high number of defective units from suppliers can lead to production disruptions, increased inspection costs, and delays in downstream operations. However, procurement teams often identify quality issues only after the goods are delivered, making it difficult to take preventive actions.
@@ -19,7 +20,7 @@ The [dataset](https://www.kaggle.com/datasets/shahriarkabir/procurement-kpi-anal
 
 ## Data Dictionary
 
-| Feature | Description |
+| Features | Description |
 |--------|-------------|
 | **PO_ID** | Unique identifier for each purchase order |
 | **Supplier** | Name of the supplier providing the goods |
@@ -36,7 +37,7 @@ The [dataset](https://www.kaggle.com/datasets/shahriarkabir/procurement-kpi-anal
 Python - Numpy, pandas, Seaborn, Matplotlib, Sklearn
 
 ## Methodology
-### Feature Creation
+### Features Creation
 Created new features from the data:
 * **Lead Time** = Delivery_Date - Order_Date
 * **Price Ratio** = Negotiated_Price/Unit_Price
