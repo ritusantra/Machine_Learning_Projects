@@ -37,25 +37,25 @@ The [dataset](https://www.kaggle.com/datasets/shahriarkabir/procurement-kpi-anal
 Python - Numpy, pandas, Seaborn, Matplotlib, Sklearn
 
 ## Methodology
-### Features Creation
+
+### New Features Creation
 Created new features from the data:
 * **Lead Time** = Delivery_Date - Order_Date
 * **Price Ratio** = Negotiated_Price/Unit_Price
 * **Negotiated vs Unit Price** = Unit_Price - Negotiated_Price
 
 ### Exploratory Data Analysis
-Performed exploratory data analysis on the data to understand the underlying data distribution, correlation between features, and identify outliers.
+* Performed exploratory data analysis (EDA) to understand data distributions, analyze feature correlations, and identify potential outliers.
+* Selected relevant features for predicting defective units by evaluating feature correlation and assessing multicollinearity among predictors.
 
 ### Feature Engineering
-* Filled the missing values
-* Capped outliers
-* Encoding categorical values
-* Transformed and scaled numerical features
+* Built a feature engineering pipeline to handle missing values, cap outliers, encode categorical variables, and apply Yeo–Johnson transformation and feature scaling.
+* Integrated the pipeline into the model training workflow to ensure consistent preprocessing across train–test split data before model training and evaluation.
 
 ### Model Training and Evaluation
-* Trained multiple regression models including Linear Regression, Ridge Regression, Lasso Regression, and Decision Tree Regressor to predict the defective units.
-* Evaluated model performance using Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), R² Score, and Adjusted R² Score.
-* Compared the performance of all models and selected Linear Regression as the final model due to its higher Adjusted R² score and lower prediction error, indicating better generalization on the dataset.
+* Trained multiple regression models including Linear Regression, Ridge, Lasso, and Decision Tree Regressor to predict defective units.
+* Evaluated model performance using MAE, MSE, RMSE, R², and Adjusted R².
+* Selected Linear Regression as the final model due to its higher Adjusted R² and lower prediction errors.
  
  
  
