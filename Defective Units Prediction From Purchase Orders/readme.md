@@ -9,6 +9,7 @@
      * [Exploratory Data Analysis](#exploratory-data-analysis)
      * [Feature Engineering](#feature-engineering)
      * [Model Training and Evaluation](#model-training-and-evaluation)
+     * [API Endpoint](#api_endpoint)
 
 ## Introduction
 Product quality is a critical factor in procurement and supply chain management. Receiving a high number of defective units from suppliers can lead to production disruptions, increased inspection costs, and delays in downstream operations. However, procurement teams often identify quality issues only after the goods are delivered, making it difficult to take preventive actions.
