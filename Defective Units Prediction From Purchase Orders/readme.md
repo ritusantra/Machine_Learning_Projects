@@ -61,8 +61,8 @@ Created new features from the data:
  ### API Endpoint
 * Depoyed and exposed the model through an API endpoint using FastAPI so anyone can send data and get predictions in real time.
 
- <img width="1861" height="854" alt="image" src="https://github.com/user-attachments/assets/2269873c-821f-4bc2-bcc5-d75d266b3953" />
- <img width="961" height="432" alt="image" src="https://github.com/user-attachments/assets/1dccb04f-4da3-4e00-8f8f-45aedaeb7fc2" />
+<img width="1861" height="854" alt="image" src="https://github.com/user-attachments/assets/2269873c-821f-4bc2-bcc5-d75d266b3953" />
+<img width="961" height="432" alt="image" src="https://github.com/user-attachments/assets/1dccb04f-4da3-4e00-8f8f-45aedaeb7fc2" />
 
 
  
