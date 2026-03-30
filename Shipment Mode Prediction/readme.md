@@ -42,8 +42,5 @@ Python - Numpy, pandas, Seaborn, Matplotlib, Sklearn
 * Evaluated multiple models and selected the best-performing one based on precision score.
 * Loaded the registered model and performed hyperparameter tuning using GridSearchCV.
 * Registered the final model with the best hyperparameters in the MLflow.
-  
-<img width="1920" height="592" alt="image" src="https://github.com/user-attachments/assets/28c9f838-4f66-4905-be08-e4d7612991f0" />
 
-<img width="1920" height="319" alt="image" src="https://github.com/user-attachments/assets/be0ff449-3fde-407e-b7c9-806ceede5aeb" />
 
