@@ -28,39 +28,36 @@ PredictShip is designed as a modular, end-to-end machine learning system built w
 At the user interface layer, the system is developed using Streamlit, where users can seamlessly switch between two modules:
 
 1. Shipment Mode Prediction
-2. Shipment Insurance Amount Prediction
+2. Shipment Insurance Cost Prediction
 
 This modular design ensures flexibility, allowing users to select their desired prediction task and input relevant shipment details through an intuitive interface.
 
 ### Backend Architecture
 **1. Feature Engineering Pipeline**
-
 For both modules, a dedicated feature engineering pipeline is implemented to preprocess raw input data. This includes:
 
 * Data cleaning
 * Encoding categorical variables
 * Feature transformation and scaling
 
-These pipelines are saved and reused during inference to maintain consistency between training and production.
+These pipelines are saved and reused during inference to maintain consistency between training and streamlit development.
 
 **2. Model Training & Selection**
-
 Each module follows a structured ML workflow:
 
 **Shipment Mode Prediction Module**
 
-* Models trained: Logistic Regression, Decision Tree, XGBoost
-* Performance evaluated using relevant classification metrics
-* XGBoost selected as the final model based on superior performance
+* Models trained: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost
+* Performance evaluated using classification metrics - Precision, Recall, F1 score, Accuracy
+* XGBoost selected as the final model based on best performance across all the metrics especially Precision 
 
-**Shipment Insurance Amount Prediction Module**
+**Shipment Insurance Cost Prediction Module**
 
 * Models trained: Linear Regression, Decision Tree, XGBoost
-* Evaluated using regression metrics
-* XGBoost selected as the final model for accurate predictions
+* Evaluated using regression metrics - MAE, MSE, RMSE, R2 score, Adjusted R2 score
+* XGBoost selected as the final model due to low error metrics and higher Adjusted R2 score
 
 **3. Experiment Tracking with MLflow**
-
 To ensure reproducibility and efficient experimentation:
 
 * MLflow is used to track model performance
@@ -71,9 +68,9 @@ To ensure reproducibility and efficient experimentation:
 * Final feature engineering pipelines and trained XGBoost models are serialized as .pkl files
 * These artifacts are integrated into the Streamlit application
 * When a user provides input, data flows through:
-1. Feature engineering pipeline
-2. Selected trained model
-3. Prediction output displayed instantly
+    * Feature engineering pipeline
+    * Selected trained model
+    * Prediction output displayed
 
 ### End-to-End Flow
 
