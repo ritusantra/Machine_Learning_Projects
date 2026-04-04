@@ -10,6 +10,7 @@
      * [Feature Engineering](#feature-engineering)
      * [Model Training](#model-training)
      * [MLflow Tracking](#mlflow-tracking)
+* [Images](#images)
  
 
 ## Introduction
@@ -143,3 +144,7 @@ User Input → Streamlit UI → Module Selection → Feature Engineering Pipelin
 * Loaded the registered model and performed hyperparameter tuning using GridSearchCV/RandomizedSearchCV.
 * Registered the final model with the best hyperparameters in the MLflow.
 
+## Images
+
+![Capturesssss](https://github.com/user-attachments/assets/cefdd717-84eb-48ed-b271-9e300666b9f9)
+![Capturesss](https://github.com/user-attachments/assets/97f9f6e6-a293-49f2-b4d7-48442db7c42e)
