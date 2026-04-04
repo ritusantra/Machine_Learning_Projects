@@ -4,7 +4,7 @@
 * [Introduction](#introduction)
 * [System Architecture](#system-architecture)
 * [Data](#data)
-* [Libraries](#libraries)
+* [Tech Stack](#tech-stack)
 * [Methodology](#methodology)
      * [Exploratory Data Analysis](#exploratory-data-analysis)
      * [Feature Engineering](#feature-engineering)
@@ -20,6 +20,43 @@ By leveraging machine learning models, PredictShip predicts the optimal shipment
 The impact is reduced logistics costs, minimized financial risk, elimination of over- or under-insurance, and faster, smarter operations. This solution empowers businesses to move from reactive decision-making to proactive, and delivering a more reliable customer experience.
 
 ## Data
+
+| Column                         | Description                                               |
+| ------------------------------ | --------------------------------------------------------- |
+| `ID`                           | Unique identifier for each shipment record                |
+| `Project Code`                 | Project under which the shipment is categorized           |
+| `PQ #`                         | Pre-Qualification reference/status                        |
+| `PO / SO #`                    | Purchase Order or Sales Order number                      |
+| `ASN/DN #`                     | Advanced Shipping Notice or Delivery Note number          |
+| `Country`                      | Destination country of the shipment                       |
+| `Managed By`                   | Entity managing the shipment                              |
+| `Fulfill Via`                  | Fulfillment method (e.g., Direct Drop)                    |
+| `Vendor INCO Term`             | International shipping terms (EXW, FCA, CIP, etc.)        |
+| `Shipment Mode`                | Mode of transport (Air, Sea, Truck) **(Target - Model 1)** |
+| `PQ First Sent to Client Date` | Date when PQ was first shared with client                 |
+| `PO Sent to Vendor Date`       | Date when PO was sent to vendor                           |
+| `Scheduled Delivery Date`      | Planned delivery date                                     |
+| `Delivered to Client Date`     | Actual delivery date                                      |
+| `Delivery Recorded Date`       | Date when delivery was recorded                           |
+| `Product Group`                | Category of product (e.g., ARV, HRDT)                     |
+| `Sub Classification`           | Sub-category (Adult, Pediatric, HIV test, etc.)           |
+| `Vendor`                       | Supplier or manufacturer                                  |
+| `Item Description`             | Detailed product description                              |
+| `Molecule/Test Type`           | Drug molecule or test type                                |
+| `Brand`                        | Brand name                                                |
+| `Dosage`                       | Drug strength/specification                               |
+| `Dosage Form`                  | Form (Tablet, Capsule, Solution, etc.)                    |
+| `Unit of Measure (Per Pack)`   | Units per pack                                            |
+| `Line Item Quantity`           | Quantity ordered                                          |
+| `Line Item Value`              | Total value of items                                      |
+| `Pack Price`                   | Price per pack                                            |
+| `Unit Price`                   | Price per unit                                            |
+| `Manufacturing Site`           | Production location                                       |
+| `First Line Designation`       | Indicates first-line treatment (Yes/No)                   |
+| `Weight (Kilograms)`           | Shipment weight                                           |
+| `Freight Cost (USD)`           | Transportation cost                                       |
+| `Line Item Insurance (USD)`    | Insurance amount **(Target - Model 2)**                   |
+
 
 
 ## System Architecture
@@ -81,8 +118,10 @@ To ensure reproducibility and efficient experimentation:
 
 User Input → Streamlit UI → Module Selection → Feature Engineering Pipeline → Trained XGBoost Model → Prediction Output
 
-## Libraries
-Python - Numpy, pandas, Seaborn, Matplotlib, Sklearn
+## Tech Stack
+* Python - Numpy, pandas, Seaborn, Matplotlib, Sklearn
+* MLflow
+* Streamlit
 
 ## Methodology
 
