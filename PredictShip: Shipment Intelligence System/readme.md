@@ -23,6 +23,7 @@ The impact is reduced logistics costs, minimized financial risk, elimination of 
 
 
 ## System Architecture
+
 PredictShip is designed as a modular, end-to-end machine learning system built with an interactive Streamlit-based frontend and robust backend pipelines for prediction and model management.
 
 At the user interface layer, the system is developed using Streamlit, where users can seamlessly switch between two modules:
@@ -33,6 +34,7 @@ At the user interface layer, the system is developed using Streamlit, where user
 This modular design ensures flexibility, allowing users to select their desired prediction task and input relevant shipment details through an intuitive interface.
 
 ### Backend Architecture
+
 **1. Feature Engineering Pipeline**
 For both modules, a dedicated feature engineering pipeline is implemented to preprocess raw input data. This includes:
 
@@ -43,6 +45,7 @@ For both modules, a dedicated feature engineering pipeline is implemented to pre
 These pipelines are saved and reused during inference to maintain consistency between training and streamlit development.
 
 **2. Model Training & Selection**
+
 Each module follows a structured ML workflow:
 
 **Shipment Mode Prediction Module**
