@@ -5,12 +5,8 @@
 * [System Architecture](#system-architecture)
 * [Data](#data)
 * [Tech Stack](#tech-stack)
-* [Methodology](#methodology)
-     * [Exploratory Data Analysis](#exploratory-data-analysis)
-     * [Feature Engineering](#feature-engineering)
-     * [Model Training](#model-training)
-     * [MLflow Tracking](#mlflow-tracking)
 * [Images](#images)
+* [Repository Structure](#repository-structure)
  
 
 ## Introduction
@@ -124,27 +120,37 @@ User Input → Streamlit UI → Module Selection → Feature Engineering Pipelin
 * MLflow
 * Streamlit
 
-## Methodology
-
-### Exploratory Data Analysis
-* Performed exploratory data analysis (EDA) to understand data distributions, analyze feature correlations, and identify potential outliers.
-* Selected relevant features for predicting shipment mode.
-
-### Feature Engineering
-* Built a feature engineering pipeline to encode categorical variables, and apply feature scaling.
-* Integrated the pipeline into the model training workflow to ensure consistent preprocessing across train–test split data before model training and evaluation.
-
-### Model Training
-* Trained multiple regression models including Logistic Regression, Decision Tree, Random Forest, and XGBoost to predict shipment mode.
-* Evaluated model performance using accuracy, precision, recall and f1 scores.
-
-### MLflow Tracking & Hyperparameter Tuning
-* Logged models, hyperparameters, and performance metrics using MLflow for experiment tracking and reproducibility.
-* Evaluated multiple models and selected the best-performing one based on precision score.
-* Loaded the registered model and performed hyperparameter tuning using GridSearchCV/RandomizedSearchCV.
-* Registered the final model with the best hyperparameters in the MLflow.
-
 ## Images
 
 ![Capturesssss](https://github.com/user-attachments/assets/cefdd717-84eb-48ed-b271-9e300666b9f9)
 ![Capturesss](https://github.com/user-attachments/assets/97f9f6e6-a293-49f2-b4d7-48442db7c42e)
+
+
+## Repository Structure
+```
+PredictShip: Shipment Intelligence System
+│
+├── Run
+│   ├── app.py                          # Streamlit application entry point
+│   ├── readme.md                      # Overview of Run folder contents
+│   ├── requirements.txt               # Project dependencies
+│   ├── shp_ins_model.pkl              # Trained shipment insurance model
+│   ├── shp_ins_pipeline.pkl           # Feature engineering pipeline for insurance model
+│   ├── shp_type_model.pkl             # Trained shipment mode prediction model
+│   ├── shp_type_pipeline.pkl          # Feature engineering pipeline for shipment mode model
+│
+├── Shipment Insurance Prediction
+│   ├── 01_Exploratory_Data_Analysis.ipynb   # Data exploration and visualization notebook
+│   ├── 02_Feature_Engineering.ipynb         # Feature engineering steps notebook
+│   ├── 03_Model_Training.ipynb               # Model training and evaluation notebook
+│   ├── readme.md                             # Documentation specific to insurance prediction module
+│
+├── Shipment Mode Prediction
+│   ├── 01_Exploratory_Data_Analysis.ipynb   # Data exploration and visualization notebook
+│   ├── 02_Feature_Engineering.ipynb         # Feature engineering steps notebook
+│   ├── 03_Model_Training.ipynb               # Model training and evaluation notebook
+│   ├── readme.md                             # Documentation specific to shipment mode prediction module
+│
+└── readme.md                                # Main project README with overview and instructions
+
+```
