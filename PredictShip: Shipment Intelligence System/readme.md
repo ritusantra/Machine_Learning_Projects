@@ -13,14 +13,72 @@
  
 
 ## Introduction
-In today’s fast-paced logistics and e-commerce industry, choosing the right shipment mode is crucial for ensuring timely delivery and cost efficiency. 
-This project focuses on predicting the most suitable shipment mode (such as air, road, or sea) based on various factors like weight, vendor, product type, and cost.
+In today’s high-speed logistics and e-commerce landscape, every shipment decision directly impacts cost, efficiency, and risk. **PredictShip: Shipment Intelligence System** is a powerful, ML-driven solution designed to bring intelligence to two critical areas: shipment planning and insurance valuation.
 
-By using machine learning, the system analyzes historical shipping data to identify patterns and make accurate predictions. 
-This helps businesses optimize their logistics operations, reduce delays, and improve customer satisfaction.
+By leveraging machine learning models, PredictShip predicts the optimal shipment mode while simultaneously determining the precise insurance amount required for each shipment. Using key inputs such as weight, pricing, product type, vendor, cost, and shipment value, the system transforms raw data into actionable insights.
+
+The impact is reduced logistics costs, minimized financial risk, elimination of over- or under-insurance, and faster, smarter operations. This solution empowers businesses to move from reactive decision-making to proactive, and delivering a more reliable customer experience.
 
 ## Data
+
+
 ## System Architecture
+PredictShip is designed as a modular, end-to-end machine learning system built with an interactive Streamlit-based frontend and robust backend pipelines for prediction and model management.
+
+At the user interface layer, the system is developed using Streamlit, where users can seamlessly switch between two modules:
+
+1. Shipment Mode Prediction
+2. Shipment Insurance Amount Prediction
+
+This modular design ensures flexibility, allowing users to select their desired prediction task and input relevant shipment details through an intuitive interface.
+
+### Backend Architecture
+**1. Feature Engineering Pipeline**
+
+For both modules, a dedicated feature engineering pipeline is implemented to preprocess raw input data. This includes:
+
+* Data cleaning
+* Encoding categorical variables
+* Feature transformation and scaling
+
+These pipelines are saved and reused during inference to maintain consistency between training and production.
+
+**2. Model Training & Selection**
+
+Each module follows a structured ML workflow:
+
+**Shipment Mode Prediction Module**
+
+* Models trained: Logistic Regression, Decision Tree, XGBoost
+* Performance evaluated using relevant classification metrics
+* XGBoost selected as the final model based on superior performance
+
+**Shipment Insurance Amount Prediction Module**
+
+* Models trained: Linear Regression, Decision Tree, XGBoost
+* Evaluated using regression metrics
+* XGBoost selected as the final model for accurate predictions
+
+**3. Experiment Tracking with MLflow**
+
+To ensure reproducibility and efficient experimentation:
+
+* MLflow is used to track model performance
+* Hyperparameter tuning and metrics are logged
+* Best-performing models are identified and versioned
+
+### Deployment & Integration Layer
+* Final feature engineering pipelines and trained XGBoost models are serialized as .pkl files
+* These artifacts are integrated into the Streamlit application
+* When a user provides input, data flows through:
+1. Feature engineering pipeline
+2. Selected trained model
+3. Prediction output displayed instantly
+
+### End-to-End Flow
+
+User Input → Streamlit UI → Module Selection → Feature Engineering Pipeline → Trained XGBoost Model → Prediction Output
+
 ## Libraries
 Python - Numpy, pandas, Seaborn, Matplotlib, Sklearn
 
