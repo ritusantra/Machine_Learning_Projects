@@ -36,6 +36,7 @@ This modular design ensures flexibility, allowing users to select their desired 
 ### Backend Architecture
 
 **1. Feature Engineering Pipeline**
+
 For both modules, a dedicated feature engineering pipeline is implemented to preprocess raw input data. This includes:
 
 * Data cleaning
@@ -61,6 +62,7 @@ Each module follows a structured ML workflow:
 * XGBoost selected as the final model due to low error metrics and higher Adjusted R2 score
 
 **3. Experiment Tracking with MLflow**
+
 To ensure reproducibility and efficient experimentation:
 
 * MLflow is used to track model performance
